@@ -12,7 +12,7 @@ questionRouter.post(
   questionsController.createQuestion
 );
 questionRouter.get("/:id", questionsController.getQuestionById);
-questionRouter.use(
+questionRouter.post(
   "/:id/options/create",
   validationCheck.validateCreateOption,
   optionController.addOption
